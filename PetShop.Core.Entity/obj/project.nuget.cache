@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qh6D3s/Y4y8nnj+ZtWfF6j1Djt4kNdt4TvR/74uV4bdqS6PcCKlHr4Tz6+Dk7lpvrxjBGVXHTHzhNU+E0sK++w==",
+  "dgSpecHash": "iIYl4zCneUtSgGG8VHsFVkXkNmnvZJnDiPqNHGIdvrWzntBoRqCQQGQD7kd8vjmP8Bz7oPHb7ucbp9fLWvMXUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.Core.Entity\\PetShop.Core.Entity.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\dpank\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\dpank\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
