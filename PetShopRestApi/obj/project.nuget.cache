@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CeyU35gYaY6yyRbGSxcLw9BH5/Z7lzHrlzO1K1xeZ0H6TdItl+bL1RmeVWx5+oNTsU7zdQgTjOhh4MB/oRYG8A==",
+  "dgSpecHash": "4msLGhqS620B5s90p7dhc5+On7F9tEyka56SPxq3qCDYZHFZvKr2F8OlxzFIqyoH3OD/Pr3LsrZCLnTlHrqHug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi.csproj",
+  "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi\\PetShop.UI.WebApi.csproj",
       "projectName": "PetShop.UI.WebApi",
-      "projectPath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi.csproj",
+      "projectPath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi\\PetShop.UI.WebApi.csproj",
       "packagesPath": "C:\\Users\\dpank\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\obj\\",
+      "outputPath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dpank\\AppData\\Roaming\\NuGet\\NuGet.Config",
