@@ -51,15 +51,16 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
 
         public Owner Update(Owner ownerToUpdate)
         {
-            Owner owner = FindOwnerById(ownerToUpdate.Id);
+            return _ownerService.Update(ownerToUpdate);
+            //Owner owner = FindOwnerById(ownerToUpdate.Id);
 
-            owner.FirstName = ownerToUpdate.FirstName;
-            owner.SecondName = ownerToUpdate.SecondName;
-            owner.Age = ownerToUpdate.Age;
-            owner.Address = ownerToUpdate.Address;
-            owner.PhoneNumber = ownerToUpdate.PhoneNumber;
+            //owner.FirstName = ownerToUpdate.FirstName;
+            //owner.SecondName = ownerToUpdate.SecondName;
+            //owner.Age = ownerToUpdate.Age;
+            //owner.Address = ownerToUpdate.Address;
+            //owner.PhoneNumber = ownerToUpdate.PhoneNumber;
 
-            return owner;
+            //return owner;
         }
     }
 }
