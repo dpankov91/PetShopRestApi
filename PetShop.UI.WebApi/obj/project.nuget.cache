@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "TZQ9p3Nq1ZuPs2TTzHx3bfZKcWt6CTqvd2VR43TOjyaWlq975LJOdCVGDA5ugkfqnWCdZ2pZ6T3SE0mnvHsBOQ==",
+  "dgSpecHash": "LskOp0sOjgza3zPOlsp4P6BAvVkJJbSiR+i65stIbbkWklY4DE76W45oGon7XEUchPvhPN5OM/9ekHC5xDNrrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.UI.WebApi\\PetShop.UI.WebApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dpank\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.8\\microsoft.aspnetcore.jsonpatch.3.1.8.nupkg.sha512",
+    "C:\\Users\\dpank\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.8\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.8.nupkg.sha512",
+    "C:\\Users\\dpank\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\dpank\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\dpank\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

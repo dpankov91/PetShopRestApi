@@ -31,19 +31,19 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
             return _petRepository.Create(pet);
         }
 
-        public Pet CreateNewPet(string Name, string Color, double Price, DateTime BirthdayDate, DateTime SoldDate)
-        {
-            Pet pet = new Pet
-            {
-                Name = Name,
-                Color = Color,
-                Price = Price,
-                BirthdayDate = BirthdayDate,
-                SoldDate = SoldDate    
-            };
-            _petRepository.Create(pet);
-            return pet;
-        }
+        //public Pet CreateNewPet(string Name, string Color, double Price, DateTime BirthdayDate, DateTime SoldDate)
+        //{
+        //    Pet pet = new Pet
+        //    {
+        //        Name = Name,
+        //        Color = Color,
+        //        Price = Price,
+        //        BirthdayDate = BirthdayDate,
+        //        SoldDate = SoldDate    
+        //    };
+        //    _petRepository.Create(pet);
+        //    return pet;
+        //}
 
         public Pet Delete(int id)
         {
@@ -52,15 +52,7 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
 
         public Pet Update(Pet petToUpdate)
         {
-            Pet pet = FindPetById(petToUpdate.Id);
-
-            petToUpdate.Name = pet.Name;
-            petToUpdate.Color = pet.Color;
-            petToUpdate.Price = pet.Price;
-            petToUpdate.BirthdayDate = pet.BirthdayDate;
-            petToUpdate.SoldDate = pet.SoldDate;
-
-            return pet;
+            return _petRepository.UpdatePet(petToUpdate);
         }
     }
 }

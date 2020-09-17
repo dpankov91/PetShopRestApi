@@ -1,66 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using PetShop.Core.DomainService;
 using PetShop.Core.Entity;
 
 namespace PetShop.Core.ApplicationService.Services.Implementation
 {
     public class OwnerService : IOwnerService
     {
-        private IOwnerService _ownerService;
+        private readonly IOwnerRepository _ownerRepository;
 
-        public OwnerService(IOwnerService ownerService)
+        public OwnerService(IOwnerRepository ownerRepository)
         {
-            _ownerService = ownerService;
+            _ownerRepository = ownerRepository;
         }
+
         public List<Owner> GetAllOwners()
         {
-           return _ownerService.GetAllOwners();
+            return _ownerRepository.GetAllOwners().ToList();
         }
 
         public Owner FindOwnerById(int id)
         {
-            return _ownerService.FindOwnerById(id);
+            return _ownerRepository.GetOwnerById(id);
         }
 
         public Owner Create(Owner owner)
         {
-            return _ownerService.Create(owner);
-        }
-
-        public Owner CreateNewOwner(string FirstName, string SecondName, int Age, string Address, int PhoneNumber)
-        {
-            Owner owner = new Owner()
-            {
-                FirstName = FirstName,
-                SecondName = SecondName,
-                Age = Age,
-                Address = Address,
-                PhoneNumber = PhoneNumber
-            };
-            _ownerService.Create(owner);
-            return owner;
-
+            return _ownerRepository.Create(owner);
         }
 
         public Owner Delete(int id)
         {
-            return _ownerService.Delete(id);
+            return _ownerRepository.Delete(id);
         }
 
 
         public Owner Update(Owner ownerToUpdate)
         {
-            return _ownerService.Update(ownerToUpdate);
-            //Owner owner = FindOwnerById(ownerToUpdate.Id);
-
-            //owner.FirstName = ownerToUpdate.FirstName;
-            //owner.SecondName = ownerToUpdate.SecondName;
-            //owner.Age = ownerToUpdate.Age;
-            //owner.Address = ownerToUpdate.Address;
-            //owner.PhoneNumber = ownerToUpdate.PhoneNumber;
-
-            //return owner;
+            return _ownerRepository.Update(ownerToUpdate);
         }
     }
 }

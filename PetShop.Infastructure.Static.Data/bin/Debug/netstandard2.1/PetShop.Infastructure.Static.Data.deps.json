@@ -1,0 +1,51 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "PetShop.Infastructure.Static.Data/1.0.0": {
+        "dependencies": {
+          "PetShop.Core": "1.0.0",
+          "PetShop.Core.Entity": "1.0.0"
+        },
+        "runtime": {
+          "PetShop.Infastructure.Static.Data.dll": {}
+        }
+      },
+      "PetShop.Core/1.0.0": {
+        "dependencies": {
+          "PetShop.Core.Entity": "1.0.0"
+        },
+        "runtime": {
+          "PetShop.Core.dll": {}
+        }
+      },
+      "PetShop.Core.Entity/1.0.0": {
+        "runtime": {
+          "PetShop.Core.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PetShop.Infastructure.Static.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetShop.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetShop.Core.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

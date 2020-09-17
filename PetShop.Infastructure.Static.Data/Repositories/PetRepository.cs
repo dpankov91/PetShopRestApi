@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using PetShop.Core.DomainService;
 using PetShop.Core.Entity;
@@ -9,12 +10,12 @@ namespace PetShop.Infastructure.Static.Data.Repositories
     public class PetRepository : IPetRepository
     {
         static int id = 1;
-        List<Pet> _pets = new List<Pet>();
+        static List<Pet> _pets = new List<Pet>();
 
 
         public IEnumerable<Pet> ReadAllPets()
         {
-            return _pets;
+            return _pets.ToList();
         }
 
         public Pet ReadPetById(int id)

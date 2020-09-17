@@ -5,13 +5,11 @@ using PetShop.Core.Entity;
 
 namespace PetShop.Core.ApplicationService.Services
 {
-    interface IPetService
+    public interface IPetService
     {
         List<Pet> GetAllPets();
 
         Pet FindPetById(int id);
-
-        Pet CreateNewPet(string Name, string Color, Double Price, DateTime BirthdayDate, DateTime SoldDate);
 
         Pet Create(Pet pet);
 

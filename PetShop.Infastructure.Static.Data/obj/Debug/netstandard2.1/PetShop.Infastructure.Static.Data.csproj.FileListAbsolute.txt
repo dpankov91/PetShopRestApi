@@ -1,0 +1,14 @@
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.deps.json
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Core.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Core.Entity.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Core.Entity.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Core.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.csprojAssemblyReference.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.AssemblyInfoInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.AssemblyInfo.cs
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.csproj.CoreCompileInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.csproj.CopyComplete
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.pdb

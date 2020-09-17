@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PetShop.Core.Entity\PetShop.Core.Entity.csproj" />
+    <ProjectReference Include="..\PetShop.Core\PetShop.Core.csproj" />
+    <ProjectReference Include="..\PetShop.Infastructure.Static.Data\PetShop.Infastructure.Static.Data.csproj" />
   </ItemGroup>
 
 

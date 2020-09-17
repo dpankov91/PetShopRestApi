@@ -8,8 +8,8 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class OwnerRepository : IOwnerRepository
     {
-        List<Owner> _owners = new List<Owner>();
-        int id = 1;
+        static List<Owner> _owners = new List<Owner>();
+        static int id = 1;
 
         public IEnumerable<Owner> GetAllOwners()
         {

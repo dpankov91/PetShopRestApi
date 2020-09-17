@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Security.Principal;
 using System.Text;
@@ -19,6 +19,6 @@ namespace PetShop.Core.Entity
 
         public int PhoneNumber { get; set; }
 
-        List<Pet> ownedPets;
+        //List<Pet> ownedPets;
     }
 }

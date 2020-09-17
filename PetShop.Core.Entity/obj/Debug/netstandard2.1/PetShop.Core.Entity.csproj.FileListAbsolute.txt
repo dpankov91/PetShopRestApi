@@ -1,0 +1,8 @@
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\bin\Debug\netstandard2.1\PetShop.Core.Entity.deps.json
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\bin\Debug\netstandard2.1\PetShop.Core.Entity.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\bin\Debug\netstandard2.1\PetShop.Core.Entity.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.AssemblyInfoInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.AssemblyInfo.cs
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.csproj.CoreCompileInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.pdb
