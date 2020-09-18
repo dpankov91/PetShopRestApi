@@ -6,3 +6,4 @@ C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entit
 C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.csproj.CoreCompileInputs.cache
 C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.dll
 C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Core.Entity\obj\Debug\netstandard2.1\PetShop.Core.Entity.csprojAssemblyReference.cache

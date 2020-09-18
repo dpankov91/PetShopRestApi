@@ -19,6 +19,6 @@ namespace PetShop.Core.Entity
 
         public int PhoneNumber { get; set; }
 
-        //List<Pet> ownedPets;
+        public List<Pet> Pets { get; set; }
     }
 }

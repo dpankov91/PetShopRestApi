@@ -67,7 +67,7 @@ namespace PetShop.UI.WebApi.Controllers
         [HttpPut("{id}")]
         public ActionResult<Owner> Put(int id, [FromBody] Owner owner)
         {
-            if(owner.Id != id || id > 0)
+            if(owner.Id != id || id < 0)
             {
                 return BadRequest("ID Error! Please check id");
             }

@@ -9,18 +9,41 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class PetRepository : IPetRepository
     {
-        static int id = 1;
-        static List<Pet> _pets = new List<Pet>();
+        //static int id = 1;
+        //static List<Pet> _pets = new List<Pet>();
+        public PetRepository()
+        {
+        if (FakeDB.Pets.Count > 0) return;
 
+            var pet1 = new Pet()
+            {
+                Id = FakeDB.petId++,
+                Name = "Pees",
+                Color = "Yellow",
+                BirthdayDate  = new DateTime(2020, 06, 15),
+                Price = 120.00
+            };
+            FakeDB.Pets.Add(pet1);
+
+            var pet2 = new Pet()
+            {
+                Id = FakeDB.petId++,
+                Name = "Lolkins",
+                Color = "Red",
+                BirthdayDate = new DateTime(2020, 02, 01),
+                Price = 120.00
+            };
+            FakeDB.Pets.Add(pet2);
+        }
 
         public IEnumerable<Pet> ReadAllPets()
         {
-            return _pets.ToList();
+            return FakeDB.Pets;
         }
 
         public Pet ReadPetById(int id)
         {
-            foreach(var pet in _pets)
+            foreach(var pet in FakeDB.Pets)
             {
                 if(pet.Id == id)
                 {
@@ -32,8 +55,8 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 
         public Pet Create(Pet pet)
         {
-            pet.Id = id++;
-            _pets.Add(pet);
+            pet.Id = FakeDB.petId++;
+            FakeDB.Pets.Add(pet);
             return pet;
         }
 
@@ -42,7 +65,7 @@ namespace PetShop.Infastructure.Static.Data.Repositories
             Pet petFound = ReadPetById(id);
             if(petFound != null)
             {
-                _pets.Remove(petFound);
+                FakeDB.Pets.Remove(petFound);
                 return petFound;
             }
             return null;         

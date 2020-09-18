@@ -18,7 +18,9 @@ namespace PetShop.Core.Entity
 
         public Double Price { get; set; }
 
-        //public Owner owner
+        public Owner Owner { get; set; }
+
+        public TypePet TypePet { get; set; }
 
     }
 }

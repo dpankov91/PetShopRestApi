@@ -8,17 +8,43 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class TypePetRepository : ITypePetRepository
     {
-        static List<TypePet> _petTypes = new List<TypePet>();
-        static  int id = 1;
+        public TypePetRepository()
+        {
+            if (FakeDB.Types.Count > 0) return;
+
+            TypePet type1 = new TypePet()
+            {
+                Id = FakeDB.typeId++,
+                Type = "Cat"
+            };
+            FakeDB.Types.Add(type1);
+
+
+            TypePet type2 = new TypePet()
+            {
+                Id = FakeDB.typeId++,
+                Type = "Dog"
+            };
+            FakeDB.Types.Add(type2);
+
+            TypePet type3 = new TypePet()
+            {
+                Id = FakeDB.typeId++,
+                Type = "Mouse"
+            };
+            FakeDB.Types.Add(type3);
+        }
+        //static List<TypePet> _petTypes = new List<TypePet>();
+        //static  int id = 1;
 
         public List<TypePet> GetAllPetTypes()
         {
-            return _petTypes;
+            return FakeDB.Types;
         }
 
         public TypePet GetPetTypeById(int id)
         {
-            foreach(var type in _petTypes)
+            foreach(var type in FakeDB.Types)
             {
                 if(type.Id == id)
                 {
@@ -30,8 +56,8 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 
         public TypePet Create(TypePet typePet)
         {
-            typePet.Id = id++;
-            _petTypes.Add(typePet);
+            typePet.Id = FakeDB.typeId++;
+            FakeDB.Types.Add(typePet);
             return typePet;
         }
 
@@ -40,7 +66,7 @@ namespace PetShop.Infastructure.Static.Data.Repositories
             TypePet typeToDelete = GetPetTypeById(id);
             if(typeToDelete != null)
             {
-                _petTypes.Remove(typeToDelete);
+                FakeDB.Types.Remove(typeToDelete);
                 return typeToDelete;
             }
             return null;

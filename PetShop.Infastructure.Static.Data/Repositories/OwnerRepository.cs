@@ -7,18 +7,58 @@ using PetShop.Core.Entity;
 namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class OwnerRepository : IOwnerRepository
-    {
-        static List<Owner> _owners = new List<Owner>();
-        static int id = 1;
+    { 
+        public OwnerRepository()
+        {
+            if (FakeDB.Owners.Count > 0) return;
+
+            var owner1 = new Owner()
+            {
+                Id = FakeDB.ownerId++,
+                FirstName = "Arnold",
+                SecondName = "Gus",
+                Age = 45,
+                Address = "Gronningen 24",
+                PhoneNumber = 61564432
+            };
+            FakeDB.Owners.Add(owner1);
+
+            var owner2 = new Owner()
+            {
+                Id = FakeDB.ownerId++,
+                FirstName = "Slim",
+                SecondName = "Shaddy",
+                Age = 22,
+                Address = "Salute 2",
+                PhoneNumber = 56477124
+            };
+            FakeDB.Owners.Add(owner2);
+
+
+            var owner3 = new Owner()
+            {
+                Id = FakeDB.ownerId++,
+                FirstName = "Bob",
+                SecondName = "McCalckin",
+                Age = 31,
+                Address = "Rabstroy 7",
+                PhoneNumber = 56477124
+            };
+            FakeDB.Owners.Add(owner3);
+        }
+
+        //static List<Owner> _owners = new List<Owner>();
+        //static int id = 1;
 
         public IEnumerable<Owner> GetAllOwners()
         {
-            return _owners;
+            return FakeDB.Owners;
+            //return _owners;
         }
 
         public Owner GetOwnerById(int id)
         {
-            foreach(var owner in _owners)
+            foreach(var owner in FakeDB.Owners)
             {
                 if(owner.Id == id)
                 {
@@ -30,8 +70,8 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 
         public Owner Create(Owner owner)
         {
-            owner.Id = id++;
-            _owners.Add(owner);
+            owner.Id = FakeDB.ownerId++;
+            FakeDB.Owners.Add(owner);
             return owner;
         }
 
@@ -40,7 +80,7 @@ namespace PetShop.Infastructure.Static.Data.Repositories
             Owner ownerToDelete = GetOwnerById(id);
             if(ownerToDelete != null)
             {
-                _owners.Remove(ownerToDelete);
+                FakeDB.Owners.Remove(ownerToDelete);
                 return ownerToDelete;
             }
             return null;
