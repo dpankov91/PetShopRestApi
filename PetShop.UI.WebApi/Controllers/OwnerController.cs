@@ -32,7 +32,9 @@ namespace PetShop.UI.WebApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<Owner> Get(int id)
         {
-            return _ownerService.FindOwnerById(id);
+            if (id < 1) return BadRequest("Id must be greater than 0");
+            //return _ownerService.FindOwnerById(id);
+            return _ownerService.GetOwnerByIdIncludePets(id);
         }
 
         // POST api/<OwnerController>

@@ -11,7 +11,7 @@ namespace PetShop.Core.ApplicationService.Services
 
         Owner FindOwnerById(int id);
 
-        //Owner CreateNewOwner(string FirstName, string SecondName, int Age, string Address, int PhoneNumber);
+        Owner GetOwnerByIdIncludePets(int id);
 
         Owner Create(Owner owner);
 

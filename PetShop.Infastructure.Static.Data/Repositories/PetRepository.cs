@@ -20,8 +20,9 @@ namespace PetShop.Infastructure.Static.Data.Repositories
                 Id = FakeDB.petId++,
                 Name = "Pees",
                 Color = "Yellow",
-                BirthdayDate  = new DateTime(2020, 06, 15),
-                Price = 120.00
+                BirthdayDate = new DateTime(2020, 06, 15),
+                Price = 120.00,
+                Owner = new Owner()
             };
             FakeDB.Pets.Add(pet1);
 
