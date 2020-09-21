@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using PetShop.Core.ApplicationService.Services;
 using PetShop.Core.DomainService;
 using PetShop.Core.Entity;
 
@@ -9,10 +11,16 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class PetRepository : IPetRepository
     {
+        
+
+
+
         //static int id = 1;
         //static List<Pet> _pets = new List<Pet>();
         public PetRepository()
         {
+           
+
         if (FakeDB.Pets.Count > 0) return;
 
             var pet1 = new Pet()
@@ -22,7 +30,8 @@ namespace PetShop.Infastructure.Static.Data.Repositories
                 Color = "Yellow",
                 BirthdayDate = new DateTime(2020, 06, 15),
                 Price = 120.00,
-                Owner = new Owner()
+                Owner = new Owner() { Id = 1},
+                TypePet = new TypePet() { Id =1}
             };
             FakeDB.Pets.Add(pet1);
 
@@ -32,7 +41,9 @@ namespace PetShop.Infastructure.Static.Data.Repositories
                 Name = "Lolkins",
                 Color = "Red",
                 BirthdayDate = new DateTime(2020, 02, 01),
-                Price = 120.00
+                Price = 133.00,
+                Owner = new Owner() { Id = 1 },
+                TypePet = new TypePet() { Id = 2 }
             };
             FakeDB.Pets.Add(pet2);
         }

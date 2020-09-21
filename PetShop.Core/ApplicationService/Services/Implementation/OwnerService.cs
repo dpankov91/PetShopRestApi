@@ -49,7 +49,6 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
             var owner = _ownerRepository.GetOwnerById(id);
             owner.Pets = _petRepository.ReadAllPets().Where(Pet => Pet.Owner.Id == owner.Id).ToList();
             return owner;   
-
         }
 
     }
