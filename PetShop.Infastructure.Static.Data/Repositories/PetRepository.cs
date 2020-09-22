@@ -11,41 +11,39 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class PetRepository : IPetRepository
     {
-        private readonly OwnerRepository _ownerRepository;
-
-
+        
         //static int id = 1;
         //static List<Pet> _pets = new List<Pet>();
-        public PetRepository(OwnerRepository ownerRepository)
+        public PetRepository()
         {
-            _ownerRepository = ownerRepository;
+
             
 
-        if (FakeDB.Pets.Count > 0) return;
+        //if (FakeDB.Pets.Count > 0) return;
 
-            var pet1 = new Pet()
-            {
-                Id = FakeDB.petId++,
-                Name = "Pees",
-                Color = "Yellow",
-                BirthdayDate = new DateTime(2020, 06, 15),
-                Price = 120.00,
-                Owner = new Owner() { Id = 1},
-                TypePet = new TypePet() { Id =1}
-            };
-            FakeDB.Pets.Add(pet1);
+            //var pet1 = new Pet()
+            //{
+            //    Id = FakeDB.petId++,
+            //    Name = "Pees",
+            //    Color = "Yellow",
+            //    BirthdayDate = new DateTime(2020, 06, 15),
+            //    Price = 120.00,
+            //  //  Owner = { F},
+            //    TypePet = new TypePet() { Id =1}
+            //};
+            //FakeDB.Pets.Add(pet1);
 
-            var pet2 = new Pet()
-            {
-                Id = FakeDB.petId++,
-                Name = "Lolkins",
-                Color = "Red",
-                BirthdayDate = new DateTime(2020, 02, 01),
-                Price = 133.00,
-                Owner = new Owner() { Id = 1 },
-                TypePet = new TypePet() { Id = 2 }
-            };
-            FakeDB.Pets.Add(pet2);
+            //var pet2 = new Pet()
+            //{
+            //    Id = FakeDB.petId++,
+            //    Name = "Lolkins",
+            //    Color = "Red",
+            //    BirthdayDate = new DateTime(2020, 02, 01),
+            //    Price = 133.00,
+            //    Owner = new Owner() { Id = 1 },
+            //    TypePet = new TypePet() { Id = 2 }
+            //};
+            //FakeDB.Pets.Add(pet2);
         }
 
         public IEnumerable<Pet> ReadAllPets()

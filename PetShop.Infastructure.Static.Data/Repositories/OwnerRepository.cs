@@ -10,41 +10,41 @@ namespace PetShop.Infastructure.Static.Data.Repositories
     { 
         public OwnerRepository()
         {
-            if (FakeDB.Owners.Count > 0) return;
+            //if (FakeDB.Owners.Count > 0) return;
 
-            var owner1 = new Owner()
-            {
-                Id = FakeDB.ownerId++,
-                FirstName = "Arnold",
-                SecondName = "Gus",
-                Age = 45,
-                Address = "Gronningen 24",
-                PhoneNumber = 61564432
-            };
-            FakeDB.Owners.Add(owner1);
+            //var owner1 = new Owner()
+            //{
+            //    Id = FakeDB.ownerId++,
+            //    FirstName = "Arnold",
+            //    SecondName = "Gus",
+            //    Age = 45,
+            //    Address = "Gronningen 24",
+            //    PhoneNumber = 61564432
+            //};
+            //FakeDB.Owners.Add(owner1);
 
-            var owner2 = new Owner()
-            {
-                Id = FakeDB.ownerId++,
-                FirstName = "Slim",
-                SecondName = "Shaddy",
-                Age = 22,
-                Address = "Salute 2",
-                PhoneNumber = 56477124
-            };
-            FakeDB.Owners.Add(owner2);
+            //var owner2 = new Owner()
+            //{
+            //    Id = FakeDB.ownerId++,
+            //    FirstName = "Slim",
+            //    SecondName = "Shaddy",
+            //    Age = 22,
+            //    Address = "Salute 2",
+            //    PhoneNumber = 56477124
+            //};
+            //FakeDB.Owners.Add(owner2);
 
 
-            var owner3 = new Owner()
-            {
-                Id = FakeDB.ownerId++,
-                FirstName = "Bob",
-                SecondName = "McCalckin",
-                Age = 31,
-                Address = "Rabstroy 7",
-                PhoneNumber = 56477124
-            };
-            FakeDB.Owners.Add(owner3);
+            //var owner3 = new Owner()
+            //{
+            //    Id = FakeDB.ownerId++,
+            //    FirstName = "Bob",
+            //    SecondName = "McCalckin",
+            //    Age = 31,
+            //    Address = "Rabstroy 7",
+            //    PhoneNumber = 56477124
+            //};
+            //FakeDB.Owners.Add(owner3);
         }
 
         //static List<Owner> _owners = new List<Owner>();

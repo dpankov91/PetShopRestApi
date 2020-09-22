@@ -15,6 +15,7 @@ using PetShop.Infastructure.Static.Data.Repositories;
 using PetShop.Core.ApplicationService.Services;
 using PetShop.Core.DomainService;
 using Newtonsoft.Json;
+using PetShop.Infastructure.Static.Data;
 
 namespace PetShop.UI.WebApi
 {
@@ -32,10 +33,13 @@ namespace PetShop.UI.WebApi
         {
             services.AddScoped<IPetService, PetService>();
             services.AddScoped<IPetRepository, PetRepository>();
+
             services.AddScoped<IOwnerService, OwnerService>();
             services.AddScoped<IOwnerRepository, OwnerRepository>();
+
             services.AddScoped<ITypePetService, TypePetService>();
-            services.AddScoped<ITypePetRepository, TypePetRepository>();
+             services.AddScoped<ITypePetRepository, TypePetRepository>();
+
             services.AddControllers().AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
         }
 
@@ -44,8 +48,21 @@ namespace PetShop.UI.WebApi
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                
             }
+
+            using(var scope = app.ApplicationServices.CreateScope())
+            {
+                var petService = scope.ServiceProvider.GetRequiredService<IPetService>();
+                var ownerService = scope.ServiceProvider.GetRequiredService<IOwnerService>();
+                var typeService  = scope.ServiceProvider.GetRequiredService<ITypePetService>();
+                var dataInitializer = new DataInitializer(petService, ownerService, typeService);
+                dataInitializer.InitOwner();
+                dataInitializer.InitTypePet();
+                dataInitializer.InitPet();
+            }
+
+            app.UseDeveloperExceptionPage();
 
             app.UseHttpsRedirection();
 

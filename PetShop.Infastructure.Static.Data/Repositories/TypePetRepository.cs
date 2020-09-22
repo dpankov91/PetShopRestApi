@@ -10,29 +10,29 @@ namespace PetShop.Infastructure.Static.Data.Repositories
     {
         public TypePetRepository()
         {
-            if (FakeDB.Types.Count > 0) return;
+            //if (FakeDB.Types.Count > 0) return;
 
-            TypePet type1 = new TypePet()
-            {
-                Id = FakeDB.typeId++,
-                Type = "Cat"
-            };
-            FakeDB.Types.Add(type1);
+            //TypePet type1 = new TypePet()
+            //{
+            //    Id = FakeDB.typeId++,
+            //    Type = "Cat"
+            //};
+            //FakeDB.Types.Add(type1);
 
 
-            TypePet type2 = new TypePet()
-            {
-                Id = FakeDB.typeId++,
-                Type = "Dog"
-            };
-            FakeDB.Types.Add(type2);
+            //TypePet type2 = new TypePet()
+            //{
+            //    Id = FakeDB.typeId++,
+            //    Type = "Dog"
+            //};
+            //FakeDB.Types.Add(type2);
 
-            TypePet type3 = new TypePet()
-            {
-                Id = FakeDB.typeId++,
-                Type = "Mouse"
-            };
-            FakeDB.Types.Add(type3);
+            //TypePet type3 = new TypePet()
+            //{
+            //    Id = FakeDB.typeId++,
+            //    Type = "Mouse"
+            //};
+            //FakeDB.Types.Add(type3);
         }
         //static List<TypePet> _petTypes = new List<TypePet>();
         //static  int id = 1;
