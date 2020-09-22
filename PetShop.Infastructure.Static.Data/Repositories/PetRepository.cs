@@ -11,15 +11,15 @@ namespace PetShop.Infastructure.Static.Data.Repositories
 {
     public class PetRepository : IPetRepository
     {
-        
-
+        private readonly OwnerRepository _ownerRepository;
 
 
         //static int id = 1;
         //static List<Pet> _pets = new List<Pet>();
-        public PetRepository()
+        public PetRepository(OwnerRepository ownerRepository)
         {
-           
+            _ownerRepository = ownerRepository;
+            
 
         if (FakeDB.Pets.Count > 0) return;
 
