@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using PetShop.Core.Entity;
+using PetShop.Core.Filter;
 
 namespace PetShop.Core.ApplicationService.Services
 {
@@ -9,7 +10,7 @@ namespace PetShop.Core.ApplicationService.Services
     {
         List<Pet> GetAllPets();
 
-        Pet FindPetById(int id);
+        Pet ReadPetById(int id);
 
         Pet Create(Pet pet);
 
@@ -17,5 +18,8 @@ namespace PetShop.Core.ApplicationService.Services
 
         Pet Update(Pet petToUpdate);
 
+        FilteredList<Pet> ReadPetsFilter(Filter.Filter filter);
+        List<Pet> GetFilteredPets(PageFilter pageFilter);
+        int Count();
     }
 }

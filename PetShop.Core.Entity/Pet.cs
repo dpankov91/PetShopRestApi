@@ -18,8 +18,10 @@ namespace PetShop.Core.Entity
 
         public Double Price { get; set; }
 
+        public int? OwnerId { get; set; }
         public Owner Owner { get; set; }
 
+        public int TypePetId { get; set; }
         public TypePet TypePet { get; set; }
 
     }

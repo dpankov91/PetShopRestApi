@@ -1,0 +1,9 @@
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\bin\Debug\netstandard2.0\PetShop.Core.Filter.deps.json
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\bin\Debug\netstandard2.0\PetShop.Core.Filter.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\bin\Debug\netstandard2.0\PetShop.Core.Filter.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\obj\Debug\netstandard2.0\PetShop.Core.Filter.csprojAssemblyReference.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\obj\Debug\netstandard2.0\PetShop.Core.Filter.AssemblyInfoInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\obj\Debug\netstandard2.0\PetShop.Core.Filter.AssemblyInfo.cs
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\obj\Debug\netstandard2.0\PetShop.Core.Filter.csproj.CoreCompileInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\obj\Debug\netstandard2.0\PetShop.Core.Filter.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Core.Filter\obj\Debug\netstandard2.0\PetShop.Core.Filter.pdb

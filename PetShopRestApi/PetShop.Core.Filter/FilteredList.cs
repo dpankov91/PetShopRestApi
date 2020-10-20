@@ -9,6 +9,5 @@ namespace PetShop.Core.Filter
             public Filter FilterUsed { get; set; }
             public int TotalCount { get; set; }
             public List<T> List { get; set; }
-
     }
 }

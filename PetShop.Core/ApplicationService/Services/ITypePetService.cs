@@ -7,7 +7,7 @@ namespace PetShop.Core.ApplicationService.Services
 {
     public interface ITypePetService
     {
-        List<TypePet> getAllTypePets();
+        IEnumerable<TypePet> getAllTypePets();
 
         TypePet getTypeById(int id);
 

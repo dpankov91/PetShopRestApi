@@ -1,0 +1,4 @@
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Infrastructure.Data\bin\Debug\netstandard2.0\PetShop.Infrastructure.Data.deps.json
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Infrastructure.Data\bin\Debug\netstandard2.0\PetShop.Infrastructure.Data.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Infrastructure.Data\obj\Debug\netstandard2.0\PetShop.Infrastructure.Data.AssemblyInfoInputs.cache
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShopRestApi\PetShop.Infrastructure.Data\obj\Debug\netstandard2.0\PetShop.Infrastructure.Data.AssemblyInfo.cs

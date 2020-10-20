@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PetShop.Core.ApplicationService.Services;
@@ -23,6 +24,7 @@ namespace PetShop.UI.WebApi.Controllers
         }
 
         // GET: api/<OwnerController>
+        //[Authorize(Roles = "Administrator")]
         [HttpGet]
         public ActionResult<IEnumerable<Owner>> Get()
         {
@@ -41,6 +43,7 @@ namespace PetShop.UI.WebApi.Controllers
         }
 
         // GET api/<OwnerController>/5
+        //[Authorize(Roles = "Administrator")]
         [HttpGet("{id}")]
         public ActionResult<Owner> Get(int id)
         {
@@ -49,11 +52,11 @@ namespace PetShop.UI.WebApi.Controllers
                 if (id < 1) {
                     return BadRequest("Id must be greater than 0");
                 }
-                else if ( _ownerService.GetOwnerByIdIncludePets(id) == null)
+                else if ( _ownerService.FindOwnerById(id) == null)
                 {
                     return NotFound();
                 }
-                else  return _ownerService.GetOwnerByIdIncludePets(id); 
+                else  return _ownerService.FindOwnerById(id); 
             }
             catch (System.Exception )
             {
@@ -62,31 +65,12 @@ namespace PetShop.UI.WebApi.Controllers
         }
 
         // POST api/<OwnerController>
+        //[Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult<Owner> Post([FromBody] Owner owner)
         {
             try
-            {
-                if (string.IsNullOrEmpty(owner.FirstName))
-                {
-                    return BadRequest("First Name Error! Check FirstName field.");
-                }
-                if (string.IsNullOrEmpty(owner.SecondName))
-                {
-                    return BadRequest("Second Name Error! Check SecondName field.");
-                }
-                if (string.IsNullOrEmpty(owner.Address))
-                {
-                    return BadRequest("Address Error! Check Address field.");
-                }
-                if (owner.Age <= 0 || owner.Age.Equals(null))
-                {
-                    return BadRequest("Age Error! Check Age field");
-                }
-                if (owner.PhoneNumber <= 0 || owner.PhoneNumber.Equals(null))
-                {
-                    return BadRequest("Phone Number Error! Check PhoneNumber Field");
-                }
+            {  
                 _ownerService.Create(owner);
                 return StatusCode(201, "Yes Sir! Owner is created.");
             }
@@ -97,6 +81,7 @@ namespace PetShop.UI.WebApi.Controllers
         }
 
         // PUT api/<OwnerController>/5
+        //[Authorize(Roles = "Administrator")]
         [HttpPut("{id}")]
         public ActionResult<Owner> Put(int id, [FromBody] Owner owner)
         {
@@ -116,6 +101,7 @@ namespace PetShop.UI.WebApi.Controllers
         }
 
         // DELETE api/< OwnerController>/5
+        //[Authorize(Roles = "Administrator")]
         [HttpDelete("{id}")]
         public ActionResult<Owner>Delete(int id)
         {

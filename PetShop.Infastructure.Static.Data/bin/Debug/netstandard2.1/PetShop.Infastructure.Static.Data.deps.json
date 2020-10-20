@@ -10,7 +10,8 @@
       "PetShop.Infastructure.Static.Data/1.0.0": {
         "dependencies": {
           "PetShop.Core": "1.0.0",
-          "PetShop.Core.Entity": "1.0.0"
+          "PetShop.Core.Entity": "1.0.0",
+          "PetShop.Core.Filter": "1.0.0"
         },
         "runtime": {
           "PetShop.Infastructure.Static.Data.dll": {}
@@ -18,7 +19,8 @@
       },
       "PetShop.Core/1.0.0": {
         "dependencies": {
-          "PetShop.Core.Entity": "1.0.0"
+          "PetShop.Core.Entity": "1.0.0",
+          "PetShop.Core.Filter": "1.0.0"
         },
         "runtime": {
           "PetShop.Core.dll": {}
@@ -27,6 +29,11 @@
       "PetShop.Core.Entity/1.0.0": {
         "runtime": {
           "PetShop.Core.Entity.dll": {}
+        }
+      },
+      "PetShop.Core.Filter/1.0.0": {
+        "runtime": {
+          "PetShop.Core.Filter.dll": {}
         }
       }
     }
@@ -43,6 +50,11 @@
       "sha512": ""
     },
     "PetShop.Core.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetShop.Core.Filter/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

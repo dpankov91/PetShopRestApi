@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: lightblue;
+            height: 100%;
+            width: 100%;
+        }
+        #main {
+            color: blue;
+        }
+        .food {
+            color: green;
+        }
+        .red-color {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="#" onsubmit="createPet(event)">
+    <label for="fpetname">Pet name:</label><br>
+    <input type="text" id="fpetname" name="fpetname" value=""><br><br>
+
+    <label for="lpetcolor">Pet color:</label><br>
+    <input type="text" id="lpetcolor" name="lpetcolor" value=""><br><br>
+
+    <label for="lpettypeid">Pet type ID:</label><br>
+    <input type="number" id="lpettypeid" name="lpettypeid" value=""><br><br>
+
+    <label for="lprice">Pet price</label><br>
+    <input type="number" id="lprice" name="lprice" value=""><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<div id="main"
+     class="red-color">....loading.....</div>
+
+<button onclick="loadData()">click me1!</button>
+<script>
+    function createPet(event) {
+        event.preventDefault()
+        let streetName = document.getElementById("fstreetname").value;
+        let streetNr = +document.getElementById("lstreetnr").value;
+        let streetAdditional = document.getElementById("ladditional").value;
+        let cityId = +document.getElementById("lcity").value;
+        let address = {
+            StreetName: streetName,
+            StreetNr: streetNr,
+            Additional: streetAdditional,
+            CityId: cityId
+        }
+
+        fetch("https://localhost:44381/api/pet", {
+            method: "POST",
+            body: JSON.stringify(pet)
+        }).then(res => {
+            console.log("Request complete! response:", res);
+        }).catch(err => {
+            console.error(err);
+        });
+    }
+    function loadData() {
+        fetch('https://localhost:44381/api/pet')
+            .then(response => response.json())
+            .then(pets => {
+                console.log(pets);
+                let datatags = "";
+                pets.forEach(pet => {
+                    datatags += "<h1>" + pet.name + "</h1>"
+                })
+                document.getElementById("main").innerHTML = datatags;
+            })
+
+    }
+</script>
+</body>
+</html>

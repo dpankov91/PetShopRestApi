@@ -15,11 +15,11 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
         {
             _typePetRepository = typePetRepository;
         }
-        public List<TypePet> getAllTypePets()
+
+        public IEnumerable<TypePet> getAllTypePets()
         {
             return _typePetRepository.GetAllPetTypes();
         }
-
         public TypePet getTypeById(int id)
         {
             return _typePetRepository.GetPetTypeById(id);

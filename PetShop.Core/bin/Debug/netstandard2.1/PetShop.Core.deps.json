@@ -9,7 +9,8 @@
     ".NETStandard,Version=v2.1/": {
       "PetShop.Core/1.0.0": {
         "dependencies": {
-          "PetShop.Core.Entity": "1.0.0"
+          "PetShop.Core.Entity": "1.0.0",
+          "PetShop.Core.Filter": "1.0.0"
         },
         "runtime": {
           "PetShop.Core.dll": {}
@@ -18,6 +19,11 @@
       "PetShop.Core.Entity/1.0.0": {
         "runtime": {
           "PetShop.Core.Entity.dll": {}
+        }
+      },
+      "PetShop.Core.Filter/1.0.0": {
+        "runtime": {
+          "PetShop.Core.Filter.dll": {}
         }
       }
     }
@@ -29,6 +35,11 @@
       "sha512": ""
     },
     "PetShop.Core.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetShop.Core.Filter/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/PetShop.Core.Entity.dll": {}
         }
+      },
+      "PetShop.Core.Filter/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PetShop.Core.Filter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetShop.Core.Filter.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../PetShop.Core.Entity/PetShop.Core.Entity.csproj",
       "msbuildProject": "../PetShop.Core.Entity/PetShop.Core.Entity.csproj"
+    },
+    "PetShop.Core.Filter/1.0.0": {
+      "type": "project",
+      "path": "../PetShopRestApi/PetShop.Core.Filter/PetShop.Core.Filter.csproj",
+      "msbuildProject": "../PetShopRestApi/PetShop.Core.Filter/PetShop.Core.Filter.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "PetShop.Core.Entity >= 1.0.0"
+      "PetShop.Core.Entity >= 1.0.0",
+      "PetShop.Core.Filter >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -54,6 +70,9 @@
           "projectReferences": {
             "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.Core.Entity\\PetShop.Core.Entity.csproj": {
               "projectPath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShop.Core.Entity\\PetShop.Core.Entity.csproj"
+            },
+            "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\PetShop.Core.Filter\\PetShop.Core.Filter.csproj": {
+              "projectPath": "C:\\Users\\dpank\\Documents\\GitHub\\PetShopRestApi\\PetShopRestApi\\PetShopRestApi\\PetShop.Core.Filter\\PetShop.Core.Filter.csproj"
             }
           }
         }
@@ -81,7 +100,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

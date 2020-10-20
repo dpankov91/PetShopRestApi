@@ -2,25 +2,33 @@
 using System.Collections.Generic;
 using System.Text;
 using PetShop.Core.ApplicationService.Services;
+using PetShop.Core.DomainService;
 using PetShop.Core.Entity;
+using PetShop.Core.Security;
 
 namespace PetShop.Infastructure.Static.Data
 {
     public class DataInitializer
     {
-        private readonly IPetService _petService;
-        private readonly IOwnerService _ownerService;
-        private readonly ITypePetService _typePetService;
+        private readonly IUserRepository _userRepository;
+        private readonly IPetRepository _petRepository;
+        private readonly IOwnerRepository _ownerRepository;
+        private readonly ITypePetRepository _typePetRepository;
+        private IAuthenticationHelper _authHelper;
 
-        public DataInitializer(IPetService petService, IOwnerService ownerService, ITypePetService typePetService)
+        public DataInitializer(IPetRepository petRepository, IOwnerRepository ownerRepository, ITypePetRepository typePetRepository, 
+                                                           IUserRepository userRepository, IAuthenticationHelper authenticationHelper)
         {
-            _petService = petService;
-            _ownerService = ownerService;
-            _typePetService = typePetService;
+            _userRepository = userRepository;
+            _petRepository = petRepository;
+            _ownerRepository = ownerRepository;
+            _typePetRepository = typePetRepository;
+            _authHelper = authenticationHelper;
         }
 
-        public void InitOwner()
+        public void InitData()
         {
+            #region Owners
             var owner1 = new Owner()
             {
                 //Id = FakeDB.ownerId++,
@@ -30,92 +38,109 @@ namespace PetShop.Infastructure.Static.Data
                 Address = "Gronningen 24",
                 PhoneNumber = 61564432
             };
-            //FakeDB.Owners.Add(owner1);
-            _ownerService.Create(owner1);
+            _ownerRepository.Create(owner1);
 
             var owner2 = new Owner()
             {
-                //Id = FakeDB.ownerId++,
                 FirstName = "Slim",
                 SecondName = "Shaddy",
                 Age = 22,
                 Address = "Salute 2",
                 PhoneNumber = 56477124
             };
-            //FakeDB.Owners.Add(owner2);
-            _ownerService.Create(owner2);
+            _ownerRepository.Create(owner2);
 
 
             var owner3 = new Owner()
                 {
-                //Id = FakeDB.ownerId++,
                 FirstName = "Bob",
                 SecondName = "McCalckin",
                 Age = 31,
                 Address = "Rabstroy 7",
                 PhoneNumber = 56477124
             };
-            //FakeDB.Owners.Add(owner3);
-            _ownerService.Create(owner3);
-        }
+            _ownerRepository.Create(owner3);
 
-        public void InitPet()
-        {
-            var pet1 = new Pet()
+            var owner4 = new Owner()
             {
-                //Id = FakeDB.petId++,
-                Name = "Pees",
-                Color = "Yellow",
-                BirthdayDate = new DateTime(2020, 06, 15),
-                Price = 120.00,
-                Owner = _ownerService.FindOwnerById(2),
-                TypePet = _typePetService.getTypeById(1)
+                FirstName = "Nicklas",
+                SecondName = "Brideman",
+                Age = 31,
+                Address = "Semenyak 28",
+                PhoneNumber = 56237124
             };
-            //FakeDB.Pets.Add(pet1);
-            _petService.Create(pet1);
-
-            var pet2 = new Pet()
-            {
-                //Id = FakeDB.petId++,
-                Name = "Lolkins",
-                Color = "Red",
-                BirthdayDate = new DateTime(2020, 02, 01),
-                Price = 133.00,
-                Owner = _ownerService.FindOwnerById(2),
-                TypePet = _typePetService.getTypeById(2)
-            };
-            //FakeDB.Pets.Add(pet2);
-            _petService.Create(pet2);
-        }
-
-        public void InitTypePet()
-        {
+            _ownerRepository.Create(owner4);
+            #endregion
+            #region Pet Types
             TypePet type1 = new TypePet()
             {
-                //Id = FakeDB.typeId++,
-                Type = "Cat"
+                Type = "Cat",
+
             };
-            //FakeDB.Types.Add(type1);
-            _typePetService.Create(type1);
+            _typePetRepository.Create(type1);
 
 
             TypePet type2 = new TypePet()
             {
-                //Id = FakeDB.typeId++,
                 Type = "Dog"
             };
-            //FakeDB.Types.Add(type2);
-            _typePetService.Create(type2);
+            _typePetRepository.Create(type2);
 
             TypePet type3 = new TypePet()
             {
-                //Id = FakeDB.typeId++,
                 Type = "Mouse"
             };
-            //FakeDB.Types.Add(type3);
-            _typePetService.Create(type3);
+            _typePetRepository.Create(type3);
+            #endregion
+            #region Pets
+            var pet1 = new Pet()
+            {
+                Name = "Pees",
+                Color = "Yellow",
+                BirthdayDate = new DateTime(2020, 06, 15),
+                Price = 120.00,
+                TypePetId = 2,
+                OwnerId = 1
+
+            };
+            _petRepository.Create(pet1); 
+
+            var pet2 = new Pet()
+            {
+                Name = "Lolkins",
+                Color = "Red",
+                BirthdayDate = new DateTime(2020, 02, 01),
+                Price = 133.00,
+                TypePetId = 1,
+                OwnerId = 1
+
+            };
+            _petRepository.Create(pet2);
+            #endregion
+            #region Users
+            string password = "1234";
+            byte[] passwordHashJohn, passwordSaltJohn, passwordHashAnna, passwordSaltAnna;
+            _authHelper.CreatePasswordHash(password, out passwordHashJohn, out passwordSaltJohn);
+            _authHelper.CreatePasswordHash(password, out passwordHashAnna, out passwordSaltAnna);
+
+            var JohnAdmin = new User()
+            {
+                Username = "John",
+                PasswordHash = passwordHashJohn,
+                PasswordSalt = passwordSaltJohn,
+                IsAdmin = true
+            };
+            _userRepository.Create(JohnAdmin);
+
+            var AnnaNotAdmin = new User()
+            {
+                Username = "Anna",
+                PasswordHash = passwordHashAnna,
+                PasswordSalt = passwordSaltAnna,
+                IsAdmin = false
+            };
+            _userRepository.Create(AnnaNotAdmin);
+            #endregion
         }
-
-
     }
 }

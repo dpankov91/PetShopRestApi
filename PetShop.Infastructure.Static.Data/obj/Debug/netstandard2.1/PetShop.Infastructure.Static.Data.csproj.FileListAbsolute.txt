@@ -12,3 +12,5 @@ C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastruct
 C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.csproj.CopyComplete
 C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.dll
 C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\obj\Debug\netstandard2.1\PetShop.Infastructure.Static.Data.pdb
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Core.Filter.dll
+C:\Users\dpank\Documents\GitHub\PetShopRestApi\PetShopRestApi\PetShop.Infastructure.Static.Data\bin\Debug\netstandard2.1\PetShop.Core.Filter.pdb

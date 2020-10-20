@@ -7,7 +7,7 @@ namespace PetShop.Core.DomainService
 {
     public interface ITypePetRepository
     {
-        List<TypePet> GetAllPetTypes();
+        IEnumerable<TypePet> GetAllPetTypes();
 
         TypePet GetPetTypeById(int id);
 

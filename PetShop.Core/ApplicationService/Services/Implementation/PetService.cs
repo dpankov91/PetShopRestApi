@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using PetShop.Core.DomainService;
 using PetShop.Core.Entity;
+using PetShop.Core.Filter;
 
 namespace PetShop.Core.ApplicationService.Services.Implementation
 {
     public class PetService : IPetService
     {
         private readonly IPetRepository _petRepository;
+        private readonly IOwnerRepository _ownerRepository;
+        private readonly ITypePetRepository _typePetRepository;
 
-        public PetService(IPetRepository petRepository)
+        public PetService(IPetRepository petRepository, IOwnerRepository ownerRepository, ITypePetRepository typePetRepository)
         {
             _petRepository = petRepository;
+            _ownerRepository = ownerRepository;
+            _typePetRepository = typePetRepository;
         }
 
         public List<Pet> GetAllPets()
@@ -21,7 +27,7 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
             return _petRepository.ReadAllPets().ToList();
         }
 
-        public Pet FindPetById(int id)
+        public Pet ReadPetById(int id)
         {
             return _petRepository.ReadPetById(id);
         }
@@ -30,20 +36,6 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
         {
             return _petRepository.Create(pet);
         }
-
-        //public Pet CreateNewPet(string Name, string Color, double Price, DateTime BirthdayDate, DateTime SoldDate)
-        //{
-        //    Pet pet = new Pet
-        //    {
-        //        Name = Name,
-        //        Color = Color,
-        //        Price = Price,
-        //        BirthdayDate = BirthdayDate,
-        //        SoldDate = SoldDate    
-        //    };
-        //    _petRepository.Create(pet);
-        //    return pet;
-        //}
 
         public Pet Delete(int id)
         {
@@ -54,5 +46,38 @@ namespace PetShop.Core.ApplicationService.Services.Implementation
         {
             return _petRepository.UpdatePet(petToUpdate);
         }
+
+        public FilteredList<Pet> ReadPetsFilter(Filter.Filter filter)
+        {
+            if (string.IsNullOrEmpty(filter.SearchField) && !string.IsNullOrEmpty(filter.SearchValue))
+            {
+                filter.SearchField = "Name";
+            }
+            else if (!string.IsNullOrEmpty(filter.SearchField) && string.IsNullOrEmpty(filter.SearchValue))
+            {
+                return null;
+            }
+            return _petRepository.ReadPetsFilter(filter);
+        }
+
+        public List<Pet> GetFilteredPets(PageFilter pageFilter)
+        {
+            return _petRepository.ReadAllPets(pageFilter).ToList();
+        }
+
+        public int Count()
+        {
+            return _petRepository.Count();
+        }
+
+        //public Pet GetPetByIdIncludeType(int id)
+        //{
+        //    var pet = _petRepository.ReadPetById(id);
+
+        //    pet.TypePet = _typePetRepository.GetAllPetTypes().Where(type =>
+        //                                    pet.TypePet != null && type.Pets.Idx == pet.Id);
+        //    return pet;
+        //}
+
     }
 }
